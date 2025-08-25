@@ -65,6 +65,7 @@ const Header = () => {
         {/* logo */}
         <Link
           to='/'
+          onClick={() => setIsOpen(false)}
           className='uppercase font-bold text-3xl hover:underline underline-offset-4 text-[#FF8C38]'
         >
           #VanLife
