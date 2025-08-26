@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='flex justify-between items-center px-3 py-4 md:px-8'>
+      <header className='flex justify-between items-center px-3 py-4'>
         {/* logo */}
         <Link
           to='/'
