@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Header = () => {
   const navLinks = [
-    // { name: 'Host', path: '/host' },
-    { name: 'Vans', path: '/vans' },
-    { name: 'About', path: '/about' },
+    { name: 'Host', path: 'host'},
+    { name: 'Vans', path: 'vans' },
+    { name: 'About', path: 'about' },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +19,7 @@ const Header = () => {
     <>
       <header className='flex justify-between items-center px-3 py-4'>
         {/* logo */}
-        <Link
-          to='/'
-          className='uppercase font-bold text-2xl hover:underline underline-offset-4'
-        >
+        <Link to='/' className='uppercase font-bold text-2xl'>
           #VanLife
         </Link>
 
@@ -30,7 +27,7 @@ const Header = () => {
         <nav>
           <ul className='hidden md:flex font-normal gap-4'>
             {navLinks.map((link) => (
-              <li key={link.name} className='p-2 text-lg'>
+              <li key={link.name} className='p-2 text-lg tracking-tighter'>
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
